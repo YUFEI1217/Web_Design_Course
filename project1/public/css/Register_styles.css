@@ -1,0 +1,306 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+    font-family: serif;
+    min-width: 360px;
+}
+
+.Register_page {
+    height: 100%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-width: 360px;
+}
+
+.Register_header {
+    background-color:burlywood;
+    display: grid;
+    grid-template-areas: 
+    "img header"
+    "nav nav";
+    grid-template-rows: 2fr auto;
+    grid-template-columns: auto auto;
+}
+
+.menu_btn_link {
+    color: blue;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.Register_header_img {
+    grid-area: img;
+    padding-left: 10%;
+    width: 80%;
+    height: 15vw;
+    transition: all 2s;
+}
+
+.Register_header_img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.Register_header_h1 {
+    grid-area: header;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: coral;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.nav_head {
+    padding: 0;
+    background-color: plum;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    list-style-type: none;
+}
+
+.head_link {
+    grid-area: nav;
+    width: 100%;
+}
+
+.nav_head li {
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.nav_head li:hover {
+    background-color: rebeccapurple;
+}
+
+.nav_head a:hover {
+    color: white;
+}
+
+.nav_head .menu_button:hover {
+    color: white;
+}
+
+.nav_head_link {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav_head_item:hover .submenu,
+.nav_head_item:focus-within .submenu {
+    top: 100%;
+    left: 30%;
+    color: white;
+}
+
+.submenu {
+    position: absolute;
+    left: -1000px;
+
+    padding: 0 0.25rem;
+    margin: 0;
+
+    transition: left 15%;
+    background-color: burlywood;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.menu_button{
+    border: none;
+    background: inherit;
+    color: blue;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav_head_item {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.submenu_link:hover {
+    display: inline-block;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+
+.submenu_link {
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.Main {
+    background-color: pink;
+    width: 100%;
+}
+
+.Main_content {
+    width: 100%;
+}
+
+.Main_form {
+    width: 100%;
+    margin: 0;
+    max-width: 1000px;
+    min-width: 360px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.Main_form p {
+    grid-column: span 12;
+    padding: 1rem;
+    color: red;
+}
+
+.column {
+    grid-column: span 6;
+    padding: 0.5rem;
+}
+
+.input_item {
+    text-align: left;
+    width: 90%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.input_item:focus {
+    border-color: red;
+    box-shadow: 0px 3px 8px plum;
+}
+
+.input_item::-webkit-input-placeholder { 
+    color: #999; 
+    -webkit-transition: color.5s; 
+} 
+
+input_item:focus::-webkit-input-placeholder, input:hover::-webkit-input-placeholder { 
+    color: #c2c2c2; 
+    -webkit-transition: color.5s;     
+} 
+
+.input_label {
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.checkbox_item {
+    position: relative;
+    margin-top: 1px;
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 2px;
+}
+
+.input_select {
+    width: 60%;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.input_button {
+    position: relative;
+    left: 40%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color:plum;
+    cursor: pointer;
+    margin-top: 25px;
+    grid-column: 6;
+}
+
+.input_button:hover {
+    box-shadow: 0px 3px 8px rebeccapurple;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color:burlywood;
+}
+
+@media screen and (max-width:62.5rem) {
+    .form_page {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .Register_header {
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+        "img"
+        "header"
+        "nav";
+        grid-template-columns: auto;
+    }
+
+    .Register_header_img {
+        padding-top: 5%;
+        padding-left: 20%;
+        grid-area: img;
+        width: 80%;
+        height: 20vw;
+    }
+
+    .nav_head {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .input_button {
+        margin-top: 10px;
+    }
+
+    .input_item {
+        text-align: left;
+        width: 75%;
+        padding: 10px 20px;
+        border-radius: 3px;
+        border: 1px solid black;
+        font-size: 12px;
+    }
+
+    .column {
+        grid-column: span 12;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .nav_head_item:hover .submenu,
+    .nav_head_item:focus-within .submenu {
+        top: 100%;
+        left: 60%;
+        color: white;
+    }
+}

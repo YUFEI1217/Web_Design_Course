@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" charset="device-width">
+        <link rel="stylesheet" href="form_styles.css"/>
+        <script defer src="js_form.js"></script>
+        <title>Regster page</title>
+    </head>
+    <body>
+        <div class="Register_page">
+            <header class="header_title">Register Page</header>
+            <main class="main">
+                <form class="register-form" action="/register" method="POST">
+
+                    <div class="input_item">
+                        <span class="register-form__error register-form__error--username">Please input the username</span>
+                        <label for="register-form__input--username" class="register-form__label">Username*</label>
+                        <input id="register-form__input--username" class="register-form__input register-form__input--username" name="username" type="text"/>
+                    </div>
+                    <div class="input_item">
+                        <span class="register-form__error register-form__error--email"></span>
+                        <label for="register-form__input--email" class="register-form__label">Email*</label>
+                        <input id="register-form__input--email" class="register-form__input register-form__input--email" name="email" type="text"/>
+                    </div>
+                    <div class="input_item">
+                        <span class="register-form__error register-form__error--confirm"></span> 
+                        <label for="register-form__input--confirm-email" class="register-form__label">Confirm Email*</label>
+                        <input id="register-form__input--confirm-email" class="register-form__input register-form__input--confirm-email" name="confirmEmail" type="text"/>
+                    </div>
+                    <div class="input_item">
+                        <span class="register-form__error register-form__error--tier"></span>
+                        <label for="register-form__select" class="register-form__label register-form__label--select">Tier*</label>
+                        <select id="register-form__select" class="register-form__input register-form__select" name="tier">
+                            <option value="">Please select</option>
+                            <option value="1">Silver Tier</option>
+                            <option value="2">Gold Tier</option>
+                            <option value="3">Platinum Tier</option>
+                        </select>
+                    </div>
+                    <div class="input_item checkbox_item">
+                        <input id="register-form__checkbox--mailing-list" class="register-form__checkbox" type="checkbox" name="mailingList"/>
+                        <label for="register-form__checkbox--mailing-list" class="register-form__label--checkbox">wants spam</label>
+                        <span class="register-form__error register-form__error--checkbox"></span>
+                    </div>
+
+                    <button class="register-form__button" type="submit">Register</button>
+                </form>
+            </main>
+            <footer class="footer">
+                <p class="nav_footer_item">Please click here to see our <a class="nav_footer_link" href="privacy policy.html">privacy policy</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

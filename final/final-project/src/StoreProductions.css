@@ -1,0 +1,248 @@
+.store__production__list {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+    list-style-type: none;
+    padding-inline-start: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.production__item {
+    /* width: 90%; */
+    /* display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto); */
+    background-color: #eeeeee;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.production__detail{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.production__img {
+    height: 20vw;
+    width: 90%;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    vertical-align: middle;
+    transition: all 2s;
+}
+
+.production__img:hover {
+    cursor: pointer;
+    border-radius: 80px;
+}
+
+.production_title {
+    grid-column: 4 / 8;
+    grid-row: 1;
+    font-size: 2rem;
+}
+
+.production__category {
+    grid-column: 4/8;
+    grid-row: 2;
+}
+
+.production__price {
+    grid-column: 8/9;
+    grid-row: 1/3;
+    color: green;
+    font-size: 1.3rem;
+    font-family: Arial;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.production__price:hover {
+    color: blue;
+}
+
+.Buygame__modal {
+    padding: 2rem;
+    text-align: center;
+}
+
+.game__input_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.game-form__button {
+    width: 40%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.Confirm__modal {
+    padding: 1rem;
+    text-align: center;
+}
+
+.confirm_button {
+    background-color: lime;
+}
+
+.close_button {
+    background-color: lightcoral;
+}
+
+.confirm__close_button {
+    background-color: lightcoral;
+}
+
+.filter__placeholder {
+    grid-column: span 2;    
+}
+
+.filter__part {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: right;
+}
+
+.filter__btn:hover {
+    background-color: rgb(4, 164, 175);
+}
+
+.filter__area:hover .filter_list,
+.filter__area:focus-within .filter_list {
+    top: 38%;
+    right: 20%;
+    color: white;
+}
+
+.filter__area {
+    width: 100%;
+}
+
+.filter_list {
+    position: absolute;
+    right: -1000px;
+
+    padding: 0 ;
+    margin: 0;
+
+    background-color:rgb(54, 176, 172) ;
+    overflow: hidden;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.filter__btn {
+    width: 70%;
+    margin-right: 2%;
+    margin-top: 2%;
+    background-color: rgb(59, 238, 232);
+    text-align: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.filter__item--btn:hover {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(59, 238, 232);
+}
+
+.filter__item--btn {
+    background-color: inherit;
+    border: none;
+    padding: 20px;
+    list-style-type: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width:50.87rem){
+    .filter__area:hover .filter_list,
+    .filter__area:focus-within .filter_list {
+        top: 45%;
+        right: 20%;
+        color: white;
+    }
+}
+
+@media (max-width:44rem){
+    .production__detail{
+        display: grid;
+        gap: 0;
+        grid-template-rows: repeat(4, 0.5fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .production__img {
+        padding-left: 4%;
+        margin-top: 5%;
+        height: 25vw;
+        grid-column: 1 / 5;
+        grid-row: 1;
+    }
+
+    .production_title{
+        height: 70%;
+        margin: 0;
+        /* padding: 5%; */
+        grid-column: 2 / 4;
+        grid-row: 2;
+        text-align: center;
+    }
+
+    .production__category{
+        padding-left: 4%;
+        height: 50%;
+        grid-column: 1 / 5;
+        grid-row: 3;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .production__price {
+        height: 50%;
+        grid-column: 2 / 4;
+        grid-row: 4;
+        font-size: 1.6rem;
+    }
+
+    .filter__btn {
+        width: 80%;
+    }
+
+    .filter__area:hover .filter_list,
+    .filter__area:focus-within .filter_list {
+        top: 45%;
+        right: 20%;
+        color: white;
+    }
+}
+
+@media (max-width:33.3rem) {
+    .filter__area:hover .filter_list,
+    .filter__area:focus-within .filter_list {
+        top: 53%;
+        right: 23%;
+        color: white;
+    }
+}

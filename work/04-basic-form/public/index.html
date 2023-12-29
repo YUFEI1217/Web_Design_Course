@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" charset="device-width">
+        <link rel="stylesheet" href="styles.css"/>  
+        <title>Form Html</title>
+    </head>
+    <body>
+        <div class="form_page">
+            <header class="Main_header">
+                <img class="head_img" src="https://placekitten.com/200/200/?image=2" alt="Cat for the logo"/>
+                <h1 class="header_h1">Register Page</h1>
+            </header>
+            <main class="Main">
+                <div class="Main_content">
+                    <form class="Main_form" action="./action.html" method="post">
+                        <div class="div_input">
+                            <div class="column">
+                                <label class="input_label">User name: </label>
+                                <input type="text" class="input_item" placeholder="Input your name" name="name" required>
+                            </div>
+                            <div class="column">
+                                <label class="input_label"> User Email: </label>
+                                <input type="email" class="input_item" placeholder="example@mail.com" name="Email" size="30" required>
+                            </div>
+                        </div>
+                        <div class="div_input">
+                            <div class="column">
+                                <label class="input_label" for="checkbox_item">Do you want us to send you annoying emails?  </label>
+                                <input class="checkbox_item" id="checkbox_item" type="checkbox" checked="checked" style="vertical-align:middle" name="annoy_me" value="yes" required>
+                            </div>
+                            <div class="column">
+                                <label class="input_label">Tier  </label>
+                                <select class="input_select" name="tier" required>
+                                    <option>Please select</option>
+                                    <option value="1">Silver Tier</option>
+                                    <option value="2">Gold Tier</option>
+                                    <option value="3">Platinum Tier</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="input_button" type="submit">Register</button>
+                    </form>
+                </div>
+            </main>
+            <footer class="footer">
+                <p class="nav_footer_item">Please click here to see our <a class="nav_footer_link" href="privacy policy.html">privacy policy</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

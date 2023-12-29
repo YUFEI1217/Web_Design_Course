@@ -1,0 +1,137 @@
+.global-nav__list {
+    padding: 0;
+    background-color:deepskyblue;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.global-nav__list li {
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.global-nav__list li:hover {
+    background-color: dodgerblue;
+}
+
+.global-nav__list a:hover {
+    color: white;
+}
+
+.global-nav__item {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.global-nav__link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: blue;
+}
+
+.global-nav__item:hover .submenu,
+.global-nav__item:focus-within .submenu {
+    top: 100%;
+    left: 40%;
+    color: white;
+}
+
+.submenu {
+    position: absolute;
+    left: -1000px;
+
+    padding: 0;
+    margin: 0;
+
+    transition: left 15%;
+    background-color:rgb(93, 177, 205) ;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.submenu_link:hover {
+    display: inline-block;
+    width: 100%;
+}
+
+.submenu_link {
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.menu_icon div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.menu_icon {
+    display: none;
+    cursor: pointer;
+}
+
+/* .icon_link {
+    border: none;
+    background-color: inherit;
+} */
+
+@media (max-width:44rem) {
+    .global-nav__list {
+        display: none;
+        /* display: ${"showNavbar"? "incline" :"none"}; */
+        
+    }
+
+    .global-nav__list__media {
+        width: 30%;
+        padding: 0;
+        background-color:deepskyblue;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        list-style-type: none;
+        text-decoration: none;
+        position: absolute;
+        top: 28%;
+        right: 0;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .global-nav__list__media li {
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+    }
+    
+    .global-nav__list__media li:hover {
+        background-color: dodgerblue;
+    }
+    
+    .global-nav__list__media a:hover {
+        color: white;
+    }
+
+    .global-nav__item:hover .submenu,
+    .global-nav__item:focus-within .submenu {
+        top: 70%;
+        left: -35%;
+        color: white;
+    }
+
+    .menu_icon {
+        position: absolute;
+        right: 5%;
+        top: 23%;
+        display: block;
+    }
+}

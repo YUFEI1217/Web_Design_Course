@@ -1,0 +1,154 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color:aliceblue;
+
+    font-family: sans-serif;
+    line-height: 1.6;
+
+    max-width: 1000px;
+    min-width: 360px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.Register_page {
+    margin: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 100%;
+    width: 100%;
+}
+
+.header_title {
+    text-align: center;
+    font-size: 4rem;
+    color: coral;
+    
+}
+
+.main {
+    width: 100%;
+    /* grid-template-areas: 
+    "lbl ip lbl ip"
+    "lbl ip . ."
+    "cblbl cb slbl select"; */
+}
+
+.register-form {
+    display: grid;
+    /* grid-template-columns: auto 1fr 0.6fr 1fr; */
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 16px;
+
+    background-color: white;
+}
+
+.input_item {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+}
+
+.input_item > span {
+    height: 24px;
+    width: 100%;
+}
+
+.register-form__label {
+    justify-self: right;
+    height: 25%;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    color: #333333;
+}
+
+.register-form__input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 28px;
+}
+
+.register-form__label--checkbox {
+    width: 50%;
+    transform: translateX(5px); 
+}
+
+.register-form__checkbox {
+    justify-self: left;
+    margin-left: 1rem;
+    transform: translateY(2px); 
+}
+
+.checkbox_item {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: row;
+}
+
+.register-form__label--select {
+    justify-self: right;
+}
+
+.register-form__select {
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.register-form__button {
+    grid-column: span 4;
+    justify-self: center;
+
+
+    margin-top: 2rem;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    background-color: chocolate;
+
+    font-size: 1.2rem;
+}
+
+.register-form__button:hover,
+.register-form__button:focus {
+    background-color: orange;  
+}
+
+.register-form__error{
+    font-size: 14px;
+    color: red;
+}
+
+.register-form__error--username {
+    transform: translateX(1px);
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+@media (max-width:40rem) {
+
+    .input_item {
+        grid-column: span 4;
+        height: 100%;
+        width: 100%;
+    }
+}

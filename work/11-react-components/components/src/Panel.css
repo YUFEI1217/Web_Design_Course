@@ -1,0 +1,13 @@
+.Show_button {
+    border-radius: 4px;
+    background-color: skyblue;
+    text-align: center;
+    align-self: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+.Show_button:hover {
+    background-color:cornflowerblue;
+}

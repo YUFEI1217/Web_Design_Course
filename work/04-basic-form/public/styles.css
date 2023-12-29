@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+    font-family: serif;
+}
+
+.form_page {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.Main_header {
+    margin: 0;
+    background-color:burlywood;
+    padding: 20px;
+    display: grid;
+    grid-template-areas: 
+    "img header";
+    grid-template-columns: 300px auto;
+}
+
+.head_img {
+    display: flex;
+    justify-self: center;
+}
+
+.header_h1 {
+    grid-area: header;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: coral;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.Main {
+    background-color: pink;
+    width: 100%;
+}
+
+.Main_content {
+    width: 100%;
+}
+
+.Main_form {
+    width: 100%;
+    margin: 0;
+    max-width: 1000px;
+    min-width: 360px;
+    padding: 40px;
+}
+
+.div_input {
+    display: flex;
+    gap: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.div_input > div {
+    width: 50%;
+}
+
+.input_item {
+    text-align: left;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.input_item:focus {
+    border-color: #6a64f1;
+    box-shadow: 0px 3px 8px plum;
+}
+
+.input_label {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.checkbox_item {
+    position: relative;
+    margin-top: 1px;
+    width: 20px;
+    height: 20px;
+    border: 0.5px solid whitesmoke;
+    border-radius: 2px;
+}
+
+.input_select {
+    width: 50%;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.input_button {
+    position: relative;
+    left: 40%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    background-color:plum;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.input_button:hover {
+    box-shadow: 0px 3px 8px rebeccapurple;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color:burlywood;
+}
+
+@media screen and (max-width:900px) {
+    .form_page {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .Main_header {
+        display: grid;
+        grid-template-areas: 
+        "img"
+        "header";
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    .div_input {
+        flex-direction: column;
+    }
+
+    .div_input > div {
+        width: 100%;
+    }
+
+    .input_button {
+        margin-top: 10px;
+    }
+}

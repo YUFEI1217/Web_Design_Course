@@ -1,0 +1,90 @@
+.Production_carousel_left {
+    width: 100%;
+    height: 100%;
+    transform: translateY(20%);
+}
+
+.Production_carousel_img {
+    margin-left: 10%;
+    border-radius: 0.5rem;
+    box-shadow: 8px 8px 7px #666;
+    width: 80%;
+    height: max-content;
+}
+
+.Production__carousel_btn {
+    height: 5%;
+    width: 7%;
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    background-color: transparent;
+    border-style: none;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.carousel_btn :hover {
+    background-color: black;
+}
+
+.Production__next_btn {
+    transform: translateX(1300%);
+}
+
+@media(max-width:44rem) {
+    .Production_carousel_left {
+        transform: translateY(5%);
+    }
+
+    .Production_carousel_img {
+        text-align: center;
+        width: 100%;
+    }
+
+    .Production__carousel_btn{
+        top: 42%
+    }
+
+    .Production__next_btn {
+        transform: translate(1250%);
+    }
+
+}
+
+@media(max-width:40rem) {
+    .Production__carousel_btn{
+        top: 45%
+    }
+
+    .Production__next_btn {
+        transform: translateX(1100%);
+    }
+
+    .Production__prev_btn {
+        transform: translateX(-40%);
+    }
+}
+
+@media(max-width:34rem) {
+    .Production__next_btn {
+        transform: translateX(1000%);
+    }
+}
+
+@media(max-width:30rem) {
+    .Production__next_btn {
+        transform: translateX(850%);
+    }
+}
+
+@media(max-width:25rem) {
+    .Production__next_btn {
+        transform: translateX(680%);
+    }
+}

@@ -1,0 +1,411 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.6;
+
+    max-width: 1200px;
+    min-width: 360px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.Cats_page {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.Cats_Mainheader {
+    background-color: burlywood;
+    display: grid;
+    grid-template-areas: 
+    "img header"
+    "nav nav";
+    grid-template-rows: 1fr auto;
+    grid-template-columns: auto auto;
+}
+
+.Cats_page_h1 {
+    grid-area: header;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: lightcoral;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo_img {
+    grid-area: img;
+    text-align: center;
+}
+
+.head_img {
+    padding: 10%;
+    transition: all 2s;
+}
+
+.head_img:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+}
+
+.nav_head {
+    visibility: visible;
+    padding: 0;
+    background-color: burlywood;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+}
+
+/* .nav_container {
+    grid-area: nav;
+} */
+
+.menu_icon div {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+.menu_icon {
+    display: none;
+}
+
+.icon_link {
+    border: none;
+    background-color: burlywood;
+}
+
+.head_link {
+    grid-area: nav;
+}
+
+.nav_head li {
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+}
+
+.nav_head li:hover {
+    background-color: dodgerblue;
+}
+
+.nav_head a:hover {
+    color: white;
+}
+
+.nav_head .menu_button:hover {
+    color: white;
+}
+
+.nav_head_item {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.nav_head_link {
+    color: blue;
+}
+
+
+.nav_head_mobile {
+    display: none;
+}
+
+
+.main {
+    width: 100%;
+    background-color: white;
+}
+
+.modal {    
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 16px;
+
+    background-color: white;
+}
+
+.modal_title {
+    grid-column: span 12;
+}
+
+.modal::backdrop { 
+    background-color: rgb(0 0 0 / 0.8 ); 
+}
+
+.input_item {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 100%;
+    width: 100%;
+}
+
+.input_item > span {
+    height: 24px;
+    width: 100%;
+}
+
+.register-form__label {
+    justify-self: right;
+    height: 25%;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.register-form__input {
+    border-radius: 5px;
+    border: 1px solid black;
+    height: 28px;
+}
+
+.register-form__label--checkbox {
+    width: 50%;
+    transform: translateX(5px); 
+}
+
+.register-form__checkbox {
+    justify-self: left;
+    margin-left: 1rem;
+    transform: translateY(2px); 
+}
+
+.checkbox_item {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: row;
+}
+
+.register-form__label--select {
+    justify-self: right;
+}
+
+.register-form__select {
+    height: 28px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 14px;
+}
+
+.input_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.register-form__button {
+    width: 40%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+
+    font-size: 1.2rem;
+}
+
+.subscribe_button {
+    background-color: lime;
+}
+
+.close_button {
+    background-color: lightcoral;
+}
+
+.register-form__button:hover,
+.register-form__button:focus {
+    background-color: papayawhip;  
+}
+
+.register-form__error{
+    font-size: 14px;
+    color: red;
+}
+
+.register-form__error--username {
+    transform: translateX(1px);
+}
+
+
+
+
+
+
+.main_list {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.card_title {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.main_item {
+    background-color: #eeeeee;
+    grid-column: span 4;
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.card {
+    /* height: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card > p {
+    margin: 0;
+}
+
+.img_area {
+    text-align: center;
+}
+
+.card_img {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+
+.card_link {
+    color: blue;
+    border: none;
+    font-size: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.card_link:hover,.card_link:focus {
+    background-color: dodgerblue;
+}
+
+.footer {
+    background-color: burlywood;
+}
+
+.footer_list {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.nav_footer_item {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer li {
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.footer li:hover{
+    background-color: dodgerblue;
+}
+
+.nav_footer_link {
+    color: blue;
+    text-decoration: none;
+    margin-top: auto;
+    text-align: center;
+    align-self: center;
+    font-size: small;
+}
+
+
+
+
+
+@media (max-width:44rem) {
+
+    .Cats_Mainheader {
+        grid-template-areas: 
+        "img header nav";
+        grid-template-rows: auto;
+        grid-template-columns: 0.5fr 1fr auto;
+    }
+
+    .nav_head_mobile {  
+        background-color: burlywood;
+        padding: 0;
+        margin: 0;  
+        visibility: hidden;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 13%;
+        right: 4%;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .nav_head_mobile li {
+        cursor: pointer;
+    }
+    
+    .nav_head_mobile li:hover {
+        background-color: dodgerblue;
+    }
+    
+    .nav_head_mobile a:hover {
+        color: white;
+    }
+    
+    .nav_head_mobile .menu_button:hover {
+        color: white;
+    }
+
+    .nav_head {
+        display: none;
+    }
+
+    .menu_icon {
+        transform: translate(-40%, 130%);
+        display: block;
+        grid-area: nav;
+    }
+
+    .main_item {
+        grid-column: span 12;
+    }
+
+    .input_item {
+        grid-column: span 12;
+        height: 100%;
+        width: 100%;
+    }
+
+    .nav_footer_item {
+        grid-column: span 12;
+    }
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" charset="device-width">
+        <link rel="stylesheet" href="css/Register_styles.css"/>  
+        <title>Register Page</title>
+    </head>
+    <body>
+        <div class="Register_page">
+            <header class="Register_header">
+                <a href="Index.html"><img class="Register_header_img" src="image/mathieu-lesniak-MsRdaGO-QvI-unsplash.jpg" alt="Logo for the Register page"/></a>
+                <h1 class="Register_header_h1">Register Page</h1>
+                <nav class="head_link">
+                    <ul class="nav_head">
+                        <li class="nav_head_item">
+                            <button class="menu_button" type="button"><a class="menu_btn_link" href="Index.html">Home</a></button>
+                            <ul class="submenu">
+                              <li class="submenu_item"><a class="submenu_link" href="Index.html">Elephant</a></li>
+                              <li class="submenu_item"><a class="submenu_link" href="Index.html">Polar bear</a></li>
+                              <li class="submenu_item"><a class="submenu_link" href="Index.html">Bull</a></li>
+                              <li class="submenu_item"><a class="submenu_link" href="Index.html">Squirrel</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav_head_item">
+                            <button class="menu_button" type="button"><a class="menu_btn_link" href="About.html">About Us</a></button>
+                            <ul class="submenu">
+                              <li class="submenu_item"><a class="submenu_link" href="About.html">Introduction</a></li>
+                              <li class="submenu_item"><a class="submenu_link" href="About.html">Our Company</a></li>
+                              <li class="submenu_item"><a class="submenu_link" href="About.html">Help Animals</a></li>
+                              <li class="submenu_item"><a class="submenu_link" href="About.html">Other</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav_head_item"><a class="nav_head_link" href="Register.html">Register</a></li>
+                    </ul>
+                </nav> 
+            </header>
+            <main class="Main">
+                <div class="Main_content">
+                    <form class="Main_form" action="/register" method="POST">
+                        <p class="Warning">Warning: [*] is required field</p>
+                        <div class="column">
+                            <label class="input_label">User name*: </label>
+                            <input type="text" class="input_item" placeholder="Please input your name" name="name" required>
+                        </div>
+                        <div class="column">
+                            <label class="input_label"> User Email*: </label>
+                            <input type="email" class="input_item" placeholder="example@mail.com" name="Email" size="30" required>                           
+                        </div>
+                        <div class="column">
+                            <label class="input_label" for="checkbox_item">Do you want us to send you annoying emails?  </label>
+                            <input class="checkbox_item" id="checkbox_item" type="checkbox" checked="checked" style="vertical-align:middle" name="annoy_me" value="yes" required>
+                        </div>
+                        <div class="column">
+                            <label class="input_label">Tier*  </label>
+                            <select class="input_select" name="tier" required>
+                                <option>Please select</option>
+                                <option value="1">Silver Tier</option>
+                                <option value="2">Gold Tier</option>
+                                <option value="3">Platinum Tier</option>
+                            </select>
+                        </div>
+                        <button class="input_button" type="submit">Register</button>
+                    </form>
+                </div>
+            </main>
+            <footer class="footer">
+                <p class="nav_footer_item">Please click here to see our <a class="nav_footer_link" href="privacy policy.html">privacy policy</a></p>
+            </footer>
+        </div>
+    </body>
+</html>

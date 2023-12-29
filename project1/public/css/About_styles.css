@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: blanchedalmond;
+    color: black;
+    font-family: serif;
+    min-width: 360px;
+}
+
+.homepage{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.homepage_header {
+    background-color: blanchedalmond;
+    display: grid;
+    grid-template-areas: 
+    "img header"
+    "nav nav";
+    grid-template-rows: 2fr auto;
+    grid-template-columns: auto auto;
+}
+
+.menu_btn_link {
+    color: blue;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.homepage_h1 {
+    grid-area: header;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    color: coral;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.head_img {
+    transform: translate(20%,4%);
+    grid-area: img;
+    padding-left: 10%;
+    width: 60%;
+    height: 10vw;
+    transition: all 2s;
+}
+
+.head_img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.nav_head {
+    padding: 0;
+    background-color: plum;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+}
+
+.head_link {
+    grid-area: nav;
+}
+
+.nav_head li {
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.nav_head li:hover {
+    background-color: rebeccapurple;
+}
+
+.nav_head a:hover {
+    color: white;
+}
+
+.nav_head .menu_button:hover {
+    color: white;
+}
+
+.nav_head_link {
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.nav_head_item:hover .submenu,
+.nav_head_item:focus-within .submenu {
+    top: 100%;
+    left: 40%;
+    color: white;
+}
+
+.submenu {
+    position: absolute;
+    left: -1000px;
+
+    padding: 0 0.25rem;
+    margin: 0;
+
+    transition: left 15%;
+    background-color: burlywood;
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.menu_button{
+    border: none;
+    background: inherit;
+    color: blue;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav_head_item {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.submenu_link:hover {
+    display: inline-block;
+    width: 100%;
+    background-color: rebeccapurple;
+}
+
+.submenu_link {
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.main_content {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 40px;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.Paragraph {
+    grid-column: span 6;
+}
+
+.content_h2 {
+    text-align: center;
+    
+}
+
+.Paragraph > p {
+
+    text-align: left;
+}
+
+.footer {
+    background-color: plum;
+}
+
+.footer_list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 20px;
+    padding: 0.5rem;
+    list-style-type: none;
+}
+
+.nav_footer_item {
+    grid-column: span 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer li {
+    margin: 0;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.nav_footer_link {
+    text-decoration: none;
+    margin-top: auto;
+    padding: 0.5rem;
+    text-align: center;
+    align-self: center;
+    font-size: small;
+}
+
+
+
+@media (max-width: 62.5rem) {
+    .main_item{
+        grid-column: span 12;
+    }
+
+    .homepage_header {
+        background-color: blanchedalmond;
+        display: grid;
+        grid-template-areas: 
+        "img"
+        "header"
+        "nav";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .homepage_h1 {
+        grid-area: header;
+    }
+
+    .head_img {
+        margin-top: 10px;
+        transform: translate(14%,0);
+        padding: 0;
+        grid-area: img;
+        width: 80%;
+        height: 40vw;
+    }
+
+    .head_link {
+        grid-area: nav;
+    }
+    
+    .nav_head {
+        flex-direction: column;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .nav_footer_item {
+        grid-column: span 12;
+    }
+
+    .card_img {
+        padding-left: 20%;
+        width: 80%;
+        height: 60vw;
+    }
+
+    .nav_head_item:hover .submenu,
+    .nav_head_item:focus-within .submenu {
+        top: 100%;
+        left: 60%;
+        color: white;
+    }
+
+    .Paragraph {
+        grid-column: span 12;
+    }
+
+    .nav_footer_item {
+        grid-column: span 12;
+    }
+}
+
